@@ -3,7 +3,7 @@ name = "chromiumoxide_cdp"
 version = "0.7.0"
 authors = ["Matthias Seitz <matthias.seitz@outlook.de>"]
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.87"
 description = "Contains all the generated types for chromiumoxide"
 license = "MIT OR Apache-2.0"
 homepage = "https://github.com/mattsse/chromiumoxide"
@@ -16,11 +16,11 @@ serde0 = []
 
 [dev-dependencies]
 chromiumoxide_pdl = { path = "../chromiumoxide_pdl", version = "0.7" }
-ureq = "2.10.0"
-tempfile = "3.10.1"
+ureq = { workspace = true }
+tempfile = { workspace = true }
 
 [dependencies]
 chromiumoxide_pdl = { path = "../chromiumoxide_pdl", version = "0.7" }
 chromiumoxide_types = { path = "../chromiumoxide_types", version = "0.7" }
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }

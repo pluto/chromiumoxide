@@ -40,11 +40,7 @@ pub struct Connection<T: EventMessage> {
 
 impl<T: EventMessage + Unpin> Connection<T> {
     pub async fn connect(debug_ws_url: impl AsRef<str>) -> Result<Self> {
-        let config = WebSocketConfig {
-            max_message_size: None,
-            max_frame_size: None,
-            ..Default::default()
-        };
+        let config = WebSocketConfig::default();
 
         cfg_if::cfg_if! {
             if #[cfg(feature = "async-std-runtime")] {
@@ -147,7 +143,7 @@ impl<T: EventMessage + Unpin> Stream for Connection<T> {
                             Ok(msg)
                         }
                         Err(err) => {
-                            tracing::debug!(target: "chromiumoxide::conn::raw_ws::parse_errors", msg = text, "Failed to parse raw WS message");
+                            tracing::debug!(target: "chromiumoxide::conn::raw_ws::parse_errors", msg = %text, "Failed to parse raw WS message");
                             tracing::error!("Failed to deserialize WS response {}", err);
                             // Go to the next iteration and try reading the next message
                             // in the hopes we can reconver and continue working.

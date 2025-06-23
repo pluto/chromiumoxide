@@ -1205,8 +1205,8 @@ mod tests {
             .out_dir(dir.join("src"))
             .serde(SerdeSupport::with_feature("serde0"))
             .compile_pdls(&[
-                dir.join("js_protocol.pdl"),
-                dir.join("browser_protocol.pdl"),
+                dir.join("../chromiumoxide_cdp/js_protocol.pdl"),
+                dir.join("../chromiumoxide_cdp/browser_protocol.pdl"),
             ])
             .unwrap();
     }

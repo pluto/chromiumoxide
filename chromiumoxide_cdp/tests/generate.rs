@@ -52,7 +52,8 @@ fn pdl_is_fresh() {
     ))
     .call()
     .unwrap()
-    .into_string()
+    .body_mut()
+    .read_to_string()
     .unwrap();
     assert!(js_proto_new.contains("The Chromium Authors"));
 
@@ -60,7 +61,8 @@ fn pdl_is_fresh() {
     let browser_proto_new = ureq::get(&format!("https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/{}/pdl/browser_protocol.pdl", CURRENT_REVISION))
         .call()
         .unwrap()
-        .into_string()
+        .body_mut()
+        .read_to_string()
         .unwrap();
     assert!(browser_proto_new.contains("The Chromium Authors"));
 
