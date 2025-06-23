@@ -27,8 +27,8 @@ fn verify_revision_available() {
 #[ignore]
 #[test]
 fn find_revision_available() {
-    let min = 1355000; // Enter the minimum revision
-    let max = 1356013; // Enter the maximum revision
+    let min = 1427262; // Enter the minimum revision
+    let max = 1465706; // Enter the maximum revision
 
     'outer: for revision in (min..max).rev() {
         println!("Checking revision {}", revision);
