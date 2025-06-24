@@ -1291,7 +1291,7 @@ impl ScreenshotParams {
                 .cdp_params
                 .format
                 .as_ref()
-                .map_or(true, |f| f == &CaptureScreenshotFormat::Png)
+                .is_none_or(|f| f == &CaptureScreenshotFormat::Png)
     }
 }
 

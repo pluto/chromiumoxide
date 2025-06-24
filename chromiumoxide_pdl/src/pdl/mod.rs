@@ -140,7 +140,7 @@ pub struct Variant<'a> {
 }
 
 impl<'a> Variant<'a> {
-    pub fn new(name: &str) -> Variant {
+    pub fn new(name: &str) -> Variant<'_> {
         Variant {
             description: Default::default(),
             name: Cow::Borrowed(name),
