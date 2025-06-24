@@ -16,8 +16,8 @@ categories = ["web-programming", "api-bindings", "development-tools::testing"]
 async-tungstenite = "0.29.1"
 serde = { version = "1.0.197", features = ["derive"] }
 async-std = { version = "1.12.0", features = [
-    "attributes",
-    "unstable",
+  "attributes",
+  "unstable",
 ], optional = true }
 futures = "0.3.31"
 chromiumoxide_types = { path = "chromiumoxide_types", version = "0.7" }
@@ -32,12 +32,12 @@ fnv = "1.0.7"
 futures-timer = "3.0.3"
 cfg-if = "1.0.1"
 tokio = { version = "1.37.0", features = [
-    "rt",
-    "rt-multi-thread",
-    "time",
-    "fs",
-    "macros",
-    "process",
+  "rt",
+  "rt-multi-thread",
+  "time",
+  "fs",
+  "macros",
+  "process",
 ], optional = true }
 tracing = "0.1.40"
 pin-project-lite = "0.2.13"
@@ -67,13 +67,13 @@ serde0 = []
 # Temporary features until cargo weak dependencies bug is fixed
 # See https://github.com/rust-lang/cargo/issues/10801
 _fetcher-rustls-async-std = [
-    "fetcher",
-    "chromiumoxide_fetcher/_rustls-async-std",
+  "fetcher",
+  "chromiumoxide_fetcher/_rustls-async-std",
 ]
 _fetcher-rusttls-tokio = ["fetcher", "chromiumoxide_fetcher/_rustls-tokio"]
 _fetcher-native-async-std = [
-    "fetcher",
-    "chromiumoxide_fetcher/_native-async-std",
+  "fetcher",
+  "chromiumoxide_fetcher/_native-async-std",
 ]
 _fetcher-native-tokio = ["fetcher", "chromiumoxide_fetcher/_native-tokio"]
 
@@ -107,10 +107,10 @@ required-features = ["tokio-runtime", "_fetcher-native-tokio"]
 
 [workspace]
 members = [
-    "chromiumoxide_pdl",
-    "chromiumoxide_types",
-    "chromiumoxide_cdp",
-    "chromiumoxide_fetcher",
+  "chromiumoxide_pdl",
+  "chromiumoxide_types",
+  "chromiumoxide_cdp",
+  "chromiumoxide_fetcher",
 ]
 
 [workspace.dependencies]
@@ -124,12 +124,12 @@ either = "1.15.0"
 # Async runtime dependencies
 async-std = { version = "1.12.0", features = ["attributes", "unstable"] }
 tokio = { version = "1.37.0", features = [
-    "rt",
-    "rt-multi-thread",
-    "time",
-    "fs",
-    "macros",
-    "process",
+  "rt",
+  "rt-multi-thread",
+  "time",
+  "fs",
+  "macros",
+  "process",
 ] }
 futures = "0.3.31"
 

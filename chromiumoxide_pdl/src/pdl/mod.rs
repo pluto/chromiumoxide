@@ -91,7 +91,7 @@ pub enum Type<'a> {
 }
 
 impl Type<'_> {
-    pub(crate) fn new(ty: &str, is_array: bool) -> Type {
+    pub(crate) fn new(ty: &str, is_array: bool) -> Type<'_> {
         if is_array {
             Type::ArrayOf(Box::new(Type::new(ty, false)))
         } else {

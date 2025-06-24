@@ -65,7 +65,7 @@ pub struct Generator {
     /// Used to fix a type's size later if the ref was not processed yet
     ref_sizes: VecDeque<(String, String)>,
     /// This contains a list of all enums of all domains with their qualified
-    /// names <domain>.<name>
+    /// names `<domain>.<name>`
     ///
     /// This is a fix in order to check in struct definitions whether the
     /// targeted type is an enum
