@@ -11,8 +11,8 @@ pub struct Viewport {
 impl Default for Viewport {
     fn default() -> Self {
         Viewport {
-            width: 800,
-            height: 600,
+            width: 1280,
+            height: 1024,
             device_scale_factor: None,
             emulating_mobile: false,
             is_landscape: false,

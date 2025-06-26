@@ -709,7 +709,7 @@ impl Page {
     /// Sends the entries collected so far to the client by means of the
     /// entryAdded notification.
     ///
-    /// See https://chromedevtools.github.io/devtools-protocol/tot/Log#method-enable
+    /// See <https://chromedevtools.github.io/devtools-protocol/tot/Log#method-enable>
     pub async fn enable_log(&self) -> Result<&Self> {
         self.execute(browser_protocol::log::EnableParams::default())
             .await?;
@@ -720,7 +720,7 @@ impl Page {
     ///
     /// Prevents further log entries from being reported to the client
     ///
-    /// See https://chromedevtools.github.io/devtools-protocol/tot/Log#method-disable
+    /// See <https://chromedevtools.github.io/devtools-protocol/tot/Log#method-disable>
     pub async fn disable_log(&self) -> Result<&Self> {
         self.execute(browser_protocol::log::DisableParams::default())
             .await?;
@@ -1291,7 +1291,7 @@ impl ScreenshotParams {
                 .cdp_params
                 .format
                 .as_ref()
-                .map_or(true, |f| f == &CaptureScreenshotFormat::Png)
+                .is_none_or(|f| f == &CaptureScreenshotFormat::Png)
     }
 }
 

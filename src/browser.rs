@@ -597,7 +597,7 @@ pub enum HeadlessMode {
     /// The old headless mode.
     #[default]
     True,
-    /// The new headless mode. See also: https://developer.chrome.com/docs/chromium/new-headless
+    /// The new headless mode. See also: <https://developer.chrome.com/docs/chromium/new-headless>
     New,
 }
 
@@ -624,7 +624,7 @@ pub struct BrowserConfig {
     /// CRX files cannot be used directly and must be first extracted.
     ///
     /// Note that Chrome does not support loading extensions in headless-mode.
-    /// See https://bugs.chromium.org/p/chromium/issues/detail?id=706008#c5
+    /// See <https://bugs.chromium.org/p/chromium/issues/detail?id=706008#c5>
     extensions: Vec<String>,
 
     /// Environment variables to set for the Chromium process.

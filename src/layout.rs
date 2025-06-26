@@ -106,7 +106,7 @@ impl ElementQuad {
         }
     }
     /// Compute sum of all directed areas of adjacent triangles
-    /// https://en.wikipedia.org/wiki/Polygon#Simple_polygons
+    /// <https://en.wikipedia.org/wiki/Polygon#Simple_polygons>
     pub fn quad_area(&self) -> f64 {
         let area = self.top_left.area(&self.top_right)
             + self.top_right.area(&self.bottom_right)
